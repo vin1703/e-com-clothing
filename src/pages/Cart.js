@@ -160,10 +160,6 @@ const Button = styled.button`
   font-weight: 600;
 `;
 function Cart() {
-  const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
-  const currentUser = user && JSON.parse(user).currentUser;
-  const TOKEN = currentUser?.accessToken;
-  console.log(TOKEN);
   
   const cart = useSelector(state=>state.cart);
   const [stripeToken,setStripeToken]=useState(null);
