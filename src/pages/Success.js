@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router";
+import { useLocation,useNavigate } from "react-router";
 import { publicRequest, userRequest } from '../requestMethod'
 
 const Success = () => {
+  const navigate = useNavigate();
   const location = useLocation();
 
   const data = location.state?.address;
@@ -49,7 +50,7 @@ const Success = () => {
       {orderId
         ? `Order has been created successfully. Your order number is ${orderId}`
         : `Successfull. Your order is being prepared...`}
-      <button style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
+      <button onClick={()=>{navigate('/')}} style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
     </div>
   );
 };
