@@ -16,7 +16,7 @@ function Products({cat,filter,sort}) {
   useEffect(()=>{
     const getProducts = async () =>{
       try{
-        const res = await axios.get(cat ?`https://api-clothes.onrender.com/product?category=${cat}`:`https://api-clothes.onrender.com/api/product`);
+        const res = await axios.get(cat ?`https://api-clothes.onrender.com/api/product?category=${cat}`:`https://api-clothes.onrender.com/api/product`);
         setProducts(res.data);
       }catch(err){
         console.log(err);
