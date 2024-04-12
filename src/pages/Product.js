@@ -8,7 +8,6 @@ import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import Footer from '../components/Footer';
 import {useLocation} from 'react-router-dom'
 import { mobile } from '../responsive';
-import axios from 'axios';
 import { publicRequest } from '../requestMethod';
 import { addProduct } from '../redux/cartRedux';
 import {useDispatch} from 'react-redux'

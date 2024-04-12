@@ -93,13 +93,13 @@ function Footer() {
       <FacebookOutlinedIcon />
     </SocialIcon>
     <SocialIcon color="E4405F">
-      <FacebookOutlinedIcon/>
+      <LocalPhoneOutlinedIcon/>
     </SocialIcon>
     <SocialIcon color="55ACEE">
-      <FacebookOutlinedIcon />
+      <EmailOutlinedIcon />
     </SocialIcon>
     <SocialIcon color="E60023">
-      <FacebookOutlinedIcon/>
+      <TwitterIcon/>
     </SocialIcon>
   </SocialContainer>
 </Left>
@@ -124,7 +124,7 @@ function Footer() {
     <FacebookOutlinedIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
   </ContactItem>
   <ContactItem>
-    <FacebookOutlinedIcon style={{marginRight:"10px"}}/> +1 234 56 78
+    <LocalPhoneOutlinedIcon style={{marginRight:"10px"}}/> +1 234 56 78
   </ContactItem>
   <ContactItem>
     <FacebookOutlinedIcon style={{marginRight:"10px"}} /> contact@lama.dev

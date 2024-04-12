@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation,useNavigate } from "react-router";
-import { publicRequest, userRequest } from '../requestMethod'
+import { userRequest } from '../requestMethod'
 
 const Success = () => {
   const navigate = useNavigate();
@@ -11,9 +11,7 @@ const Success = () => {
   const cart = location.state?.cart;
   const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
-  // console.log(data);
-  // console.log(cart);
-  // console.log(currentUser);
+
   useEffect(() => {
     const createOrder = async () => {
       try {

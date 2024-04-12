@@ -8,7 +8,7 @@ import RemoveOutlined from "@mui/icons-material/RemoveOutlined";
 import { mobile } from "../responsive";
 import {useSelector} from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout'
-import { publicRequest, userRequest } from "../requestMethod";
+import {userRequest } from "../requestMethod";
 import {Link, useNavigate} from 'react-router-dom'
 
 const KEY = process.env.REACT_APP_STRIPE
