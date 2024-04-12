@@ -171,19 +171,16 @@ function Cart() {
   useEffect(()=>{
     const makeRequest = async ()=>{
       try{
-        const res = await userRequest.post('checkout/payment',{
+        await userRequest.post('checkout/payment',{
           token : stripeToken,
           amount:cart.total
         })
-        // console.log('in');
-        // console.log(stripeToken.card);
         navigate('/success',{state:{address:stripeToken.card,cart:cart}});
       }catch(error){
-       console.log('catchclient')
       }
     }
     stripeToken && makeRequest();
-  },[stripeToken,navigate])
+  },[cart,stripeToken,navigate])
   return (
     <Container>
       <Navbar />
