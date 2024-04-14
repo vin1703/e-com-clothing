@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { useLocation,useNavigate } from "react-router";
 import { userRequest } from '../requestMethod'
+import {useSelector} from 'react-redux'
 
 const Success = () => {
+
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,6 +31,7 @@ const Success = () => {
             pincode:data.address_zip
           } ,
         });
+        console.log(res.data);
         setOrderId(res.data._id);
       } catch {}
     };

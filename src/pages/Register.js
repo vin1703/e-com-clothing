@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { mobile } from '../responsive';
-import {useDispatch} from 'react-redux';
-import { register } from '../redux/apiCalls';
+import {useNavigate} from 'react-router-dom';
+import { publicRequest } from '../requestMethod';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -56,7 +56,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 function Register() {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [fsname,setFsname]= useState('');
   const [lsname,setLsname]= useState('');
   const [username,setusername]= useState('');
@@ -64,10 +64,12 @@ function Register() {
   const [password,setpassword]= useState('');
   const [cpassword,setcpassword]= useState('');
 
-  const handleReg = (e)=>{
+  const handleReg = async(e)=>{
     e.preventDefault();
+    console.log(password);
     if(password!==cpassword)return alert('confirm password must be same');
-    register(dispatch,{username,email,password});
+    const res = await publicRequest.post("/auth/register",{username,email,password});
+    if(res.data) navigate('/login');
   }
   return (
     <Container>
@@ -78,8 +80,8 @@ function Register() {
           <Input value={lsname} placeholder="Last name" onChange={(e)=>setLsname(e.target.value)} />
           <Input value={username} placeholder="username" onChange={(e)=>setusername(e.target.value)} />
           <Input value={email} placeholder="email" onChange={(e)=>setemail(e.target.value)} />
-          <Input type='password' value={password} placeholder="password" onChange={(e)=>setpassword(e.target.value)} />
-          <Input type='password' value={cpassword} placeholder="confirm password" onChange={(e)=>setcpassword(e.target.value)} />
+          <Input  value={password} placeholder="password" onChange={(e)=>setpassword(e.target.value)} />
+          <Input  value={cpassword} placeholder="confirm password" onChange={(e)=>setcpassword(e.target.value)} />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>

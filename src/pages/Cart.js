@@ -160,13 +160,11 @@ const Button = styled.button`
   font-weight: 600;
 `;
 function Cart() {
-  
   const cart = useSelector(state=>state.cart);
   const [stripeToken,setStripeToken]=useState(null);
   const onToken = (token) =>{
     setStripeToken(token)
   }
-  // console.log(stripeToken);
   const navigate = useNavigate();
   useEffect(()=>{
     const makeRequest = async ()=>{
