@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { mobile } from '../responsive';
@@ -44,15 +44,22 @@ const Button = styled.button`
   border: none;
   background-color: teal;
   color: white;
+  cursor:pointer;
 `;
 function Newsletter() {
+  const [email,setEmail] = useState("");
+  const handleSubmit = ()=>{
+    if(email==="")return;
+    if(!email.includes('@'))return window.alert("invalid Email Id")
+    return window.alert("subscribed")
+  }
   return (
     <Container>
       <Title>Newsletter</Title>
       <Desc>Get timely updates from your favorite products.</Desc>
       <InputContainer>
-        <Input placeholder="Your email" />
-        <Button>
+        <Input placeholder="Your email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+        <Button onClick={handleSubmit}>
           <SendOutlinedIcon />
         </Button>
       </InputContainer>

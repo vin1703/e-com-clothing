@@ -1,18 +1,19 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
-    },
-    {
-      id: 2,
       img: "https://i.ibb.co/DG69bQ4/2.png",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",
     },
+    {
+      id: 2,
+      img: "https://img.freepik.com/free-photo/man-white_1368-3544.jpg?size=626&ext=jpg&ga=GA1.1.1141335507.1719187200&semt=ais_user",
+      title: "WINTER SALE",
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      bg: "#fff",
+    },
+
     {
       id: 3,
       img: "https://i.ibb.co/cXFnLLV/3.png",
@@ -25,21 +26,21 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "https://www.reef.com/cdn/shop/collections/PLP_M_MensApparel_SP24_CategoryBanner_Desktop.webp?v=1710267843&width=1204",
       title: "SHIRT STYLE!",
-      cat:"women"
+      cat:"shirts"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
+      img: "https://img.freepik.com/free-photo/modern-man-with-sunglasses-city_23-2147961048.jpg",
+      title: "DENIM JACKETS",
+      cat:"denims"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11515984/2024/3/15/33d8b8d0-63d0-4e05-8d0f-e1ad9ca992fa1710499969504-ADA-Women-Yellow--White-Chikankari-Embroidered-Straight-Sust-1.jpg",
+      title: "WOMEN WEAR",
+      cat:"women"
     },
   ];
 

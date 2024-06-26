@@ -75,14 +75,10 @@ function Navbar() {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <SearchContainer>
-          <Input placeholder="Search" />
-            <SearchIcon style={{ color: "gray", fontSize: 16 }}/>
-          </SearchContainer>
         </Left>
         <Center>
             <Logo>
-            VIN.
+              E-Clothing.
             </Logo>
         </Center>
         <Right>

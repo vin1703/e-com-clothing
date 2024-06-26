@@ -82,7 +82,7 @@ function Footer() {
   return (
 <Container>
 <Left>
-  <Logo>LAMA.</Logo>
+  <Logo>E-Clothing</Logo>
   <Desc>
     There are many variations of passages of Lorem Ipsum available, but
     the majority have suffered alteration in some form, by injected

@@ -74,6 +74,7 @@ const FilterColor = styled.div`
   background-color: ${(props) => props.color};
   margin: 0px 5px;
   cursor: pointer;
+  border:1px solid black;
 `;
 
 const FilterSize = styled.select`
@@ -120,6 +121,9 @@ const Button = styled.button`
   }
 `;
 function Product() {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   const location = useLocation();
   const id = location.pathname.split('/')[2];
   const [product,setProduct] = useState({});

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
@@ -37,6 +37,9 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 function ProductList() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const location = useLocation();
   const cat = location.pathname.split('/')[2];
   const [filter,setFilter] = useState({});

@@ -161,6 +161,7 @@ const Button = styled.button`
 `;
 function Cart() {
   const cart = useSelector(state=>state.cart);
+  const user = useSelector(state=>state.user?.currentUser)
   const [stripeToken,setStripeToken]=useState(null);
   const onToken = (token) =>{
     setStripeToken(token)
@@ -169,7 +170,8 @@ function Cart() {
   useEffect(()=>{
     const makeRequest = async ()=>{
       try{
-        await userRequest.post('checkout/payment',{
+        const axiosInstance = userRequest(user?.accessToken);
+        await axiosInstance.post('checkout/payment',{
           token : stripeToken,
           amount:cart.total
         })

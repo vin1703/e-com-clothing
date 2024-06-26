@@ -8,7 +8,7 @@ const Success = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
+  const user = useSelector(state=>state.user?.currentUser)
   const data = location.state?.address;
   const cart = location.state?.cart;
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -17,7 +17,8 @@ const Success = () => {
   useEffect(() => {
     const createOrder = async () => {
       try {
-        const res = await userRequest.post("/order", {
+        const axiosInstance = userRequest(user?.accessToken);
+        const res = await axiosInstance.post("/order", {
           userId: currentUser._id,
           products: cart.products.map((item) => ({
             productId: item._id,

@@ -15,7 +15,7 @@ function Products({cat,filter,sort}) {
   useEffect(()=>{
     const getProducts = async () =>{
       try{
-        const res = await axios.get(cat ?`https://white-lamb-hem.cyclic.app/api/product?category=${cat}`:`https://white-lamb-hem.cyclic.app/api/product`);
+        const res = await axios.get(cat ?`http://localhost:5000/api/product?category=${cat}`:`http://localhost:5000/api/product`);
         setProducts(res.data);
       }catch(err){
         console.log(err);
