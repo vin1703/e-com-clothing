@@ -121,13 +121,13 @@ function Footer() {
 <Right>
   <Title>Contact</Title>
   <ContactItem>
-    <FacebookOutlinedIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+     622 Dixie Path , South Tobinchester 98336
   </ContactItem>
   <ContactItem>
     <LocalPhoneOutlinedIcon style={{marginRight:"10px"}}/> +1 234 56 78
   </ContactItem>
   <ContactItem>
-    <FacebookOutlinedIcon style={{marginRight:"10px"}} /> contact@lama.dev
+     contact@eclothing
   </ContactItem>
   <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
 </Right>
