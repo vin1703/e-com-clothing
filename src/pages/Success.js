@@ -37,7 +37,7 @@ const Success = () => {
       } catch {}
     };
     data && createOrder();
-  }, [cart, data, currentUser]);
+  }, [cart, data, currentUser,user?.accessToken]);
 
   return (
     <div

@@ -180,7 +180,7 @@ function Cart() {
       }
     }
     stripeToken && makeRequest();
-  },[cart,stripeToken,navigate])
+  },[cart,stripeToken,navigate,user?.accessToken])
   return (
     <Container>
       <Navbar />
