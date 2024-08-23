@@ -26,7 +26,7 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://www.reef.com/cdn/shop/collections/PLP_M_MensApparel_SP24_CategoryBanner_Desktop.webp?v=1710267843&width=1204",
+      img: "https://shirttheory.co.in/cdn/shop/files/CYS_2.png?v=1631525581&width=400",
       title: "SHIRT STYLE!",
       cat:"shirts"
     },
